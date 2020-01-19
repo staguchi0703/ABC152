@@ -16,6 +16,15 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
+N = int(input())
 num_list = [int(item) for item in input().split()]
-print('C', num_list)
 
+cnt = 1
+prev_num = num_list[0] 
+
+for i in num_list[1:]:
+    if i < prev_num:
+        cnt += 1
+        prev_num = i
+
+print(cnt)

@@ -16,6 +16,14 @@ sys.stdin=f
 ##################################
 # %%
 # 以下ペースト可
-num_list = [int(item) for item in input().split()]
-print('B', num_list)
+a, b = [int(item) for item in input().split()]
+
+a_srting = str(a) * b
+b_string = str(b) * a
+
+
+if a_srting < b_string:
+    print(a_srting)
+else:
+    print(b_string)
 
